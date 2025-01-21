@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charcoal-gray: #2E2E2E;
+  --light-gray: #A3A3A3;
+  --majorelle-blue: #4b50e3;
+  --off-white: #E5E5E5;
+  --deep-black: #1C1C1C;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 11%;
+    --foreground: 0 0% 90%;
+    --card: 0 0% 18%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 18%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 238 89% 59%;
+    --primary-foreground: 0 0% 90%;
+    --secondary: 0 0% 64%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 64%;
+    --muted-foreground: 0 0% 90%;
+    --accent: 238 89% 59%;
+    --accent-foreground: 0 0% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 238 89% 59%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#1C1C1C] text-[#E5E5E5];
+  }
+}
+
+.nav-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--deep-black) 0%, var(--charcoal-gray) 100%);
+}
+
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(75, 80, 227, 0.15);
+}
